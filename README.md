@@ -1,2 +1,2 @@
-# theorytest
+# Test of Theory
 Test of Theory
