@@ -4,7 +4,7 @@ In this repository you will find:
 
 1. [Software](https://raw.githubusercontent.com/labelinstitute/theorytest/main/risk_exp/Software). Multistage is developed at SSEL at Caltech. [Here](https://drive.google.com/file/d/1jp9XA6YVJm3eW9_c4rYbBQtlSfmJg9XO/view) are short instructions to run it. *LABEL does not provide assistance if the experimental software is not compatible with newer versions. Experimenters should seek support from the developer and make the appropriate adjustments to the code.*
 
-2. [Instructions](https://raw.githubusercontent.com/labelinstitute/theorytest/main/risk_exp/Instructions.pdf). 
+2. [Instructions](https://raw.githubusercontent.com/labelinstitute/theorytest/main/risk_exp/Instructions.docx) and [presentation](https://raw.githubusercontent.com/labelinstitute/theorytest/main/risk_exp/Instructions_Presentation.pdf). 
 
 3. [Data](https://github.com/labelinstitute/theorytest/tree/main/risk_exp/Data).
 
