@@ -1,0 +1,437 @@
+# SAMPLE PATHS PARAMETER FILE #
+
+### Experiment Scope Parameters ###
+exp.id=60
+numOfMatches=41
+
+#### Generic Match Scope Parameters ####
+match.0.type=Paths
+match.0.groupSize=10
+match.0.maxRounds=1
+match.0.exchangeRate=1.0
+
+match.40.type=Paths
+match.40.groupSize=1
+match.40.maxRounds=1
+match.40.exchangeRate=1.0
+
+# show total payoff on the history panel[true|false]
+match.0.showTotalPayoff=false
+match.40.showTotalPayoff=false
+
+#[totalrandom|random|zipper|rr|continue|fixed|RiskAversion]
+match.0.matching=fixed
+match.40.matching=fixed
+
+
+# show the match ending display dialog [true|false]
+match.0.displayFinishedInfo=false
+match.40.displayFinishedInfo=false
+
+# History panel display mode [full|tabbed]
+match.0.defaultView=full
+match.40.defaultView=full
+
+# Whether to allow user switch history panel display modes [true|false]
+match.0.viewSwitchable=true
+match.40.viewSwitchable=true
+
+# Whether to show the round number in the history panel (generally turn off if running single round matches)
+match.0.showRoundNumber=false
+match.40.showRoundNumber=false
+
+# Whether or not the 0th match is a practice match or not.  Payoffs for 
+# practice matches are not included in a participant's total
+match.0.practice=true
+match.5.practice=false
+match.20.practice=true
+match.21.practice=false
+match.40.practice=false
+
+######### PATHS Specific Match Scope Parameters ############
+
+# the number of periods in a path
+match.0.numPeriods=10
+match.40.numPeriods=10
+
+# the amount of time the first period lasts, in seconds
+match.0.firstPeriodLength=10
+match.40.firstPeriodLength=10
+# the amount of time each period lasts, in seconds
+match.0.otherPeriodLength=6
+match.40.otherPeriodLength=6
+
+# the interest rate for the 'safe' asset
+# if match.0.safeInterestRate=.10, then at the beginning of a period a player has 1.10*(the amount of safe asset from the previous period)
+match.0.safeInterestRate=0.03
+match.40.safeInterestRate=0.03
+
+# The return on the risky asset will be normally distributed on (mean, variance)
+match.0.riskyMean=0.06
+match.0.riskyVariance=0.3025
+match.40.riskyMean=0.06
+match.40.riskyVariance=0.3025
+
+# the amount of money each subject starts with at the beginning of each path
+match.0.initialHoldings=3
+match.40.initialHoldings=3
+
+# the original maximum value of the sliders
+match.0.initialMaxValue=28
+match.40.initialMaxValue=28
+
+# the increment by which the maxValue is increased if the holdings exceed it
+match.0.maxIncrement=4
+match.40.maxIncrement=4
+
+# the subsets of matches in which players are paid
+#  For example, if paidSubsets=0-4,5-14, then subjects will be paid for one match between match 0 and match 4, 
+#                                                             and one match between match 5 and match 14.
+match.0.paidSubsets=5-19,21-40
+match.40.paidSubsets=5-19,21-40
+
+# the subsets of periods in which betting is allowed
+#    A comma-separated set of numbers, from 0 to numPeriods.  If a number is listed, betting is allowed.  If not listed,
+#    betting in that period is not allowed.  Note that by listing *no* periods, all betting is disallowed.
+match.0.bettingPeriods=
+match.20.bettingPeriods=0,1,2,3,4,5,6,7,8,9
+match.40.bettingPeriods=0,1,2,3,4,5,6,7,8,9
+
+# the cost of placing a bet
+match.0.betPrice=1
+match.40.betPrice=1
+
+# the benefit of winning the lottery
+match.0.betWinnings=20
+match.40.betWinnings=20
+
+# the probability of winning the lottery
+match.0.probOfWinning=0.04
+match.40.probOfWinning=0.04
+
+# the periods in which the min/avg/max statistics are available to be revealed by subjects
+match.0.revealPeriods=
+match.31.revealPeriods=4,8
+match.40.revealPeriods=4,8
+
+# whether the subjects are allowed to view as many statistics as they like or only one
+# [ONE|MANY]: ONE - subjects are only allowed to view one statistic per period
+#                   MANY - subjects are allowed to view as many statistics per period as they wish
+match.0.revealType=ONE
+match.40.revealType=ONE
+
+###  GUI PARAMETERS  ###
+
+# whether or not to show the 90th percentile projections
+match.0.gui.use90thPercentile=false
+match.40.gui.use90thPercentile=false
+
+# the height, on screen, of the paths display, as a proportion of total screen height
+match.0.gui.gridLinesHeightProportion=0.8
+match.40.gui.gridLinesHeightProportion=0.8
+
+# the width, on screen, of each slider column, as a proportion of total screen width
+match.0.gui.sliderWidthProportion=.02
+match.40.gui.sliderWidthProportion=.02
+
+# whether or not to pop up an 'ok' button at the end of every period
+match.0.gui.displayPeriodPopup=true
+match.40.gui.displayPeriodPopup=true
+
+# if displayPeriodPopup is true, the message to display above the button
+match.0.gui.periodEndMessage=The path has ended.  Please click 'OK' to continue.
+match.40.gui.periodEndMessage=The path has ended.  Please click 'OK' to continue.
+
+#whether or not the subjects choice (of whether to display dollars or percents) is fixed after the first period in each path
+# [true|false] - true:  the subjects have to pick to view dollars or percents every period and it is fixed for the length of the period
+#                     false:  the subjects can change their view any time during the period
+match.0.fixChosenView=false
+match.40.fixChosenView=false
+
+# whether or not to carry over the previous period's choice (of whether to display dollars or percents) into the beginning 
+# of the next period
+match.0.carryOverView=true
+match.40.carryOverView=true
+
+match.0.gui.table=<html><table><tr align="center"><th></th><th>Mean Return</th><th>St. Dev.</th></tr><tr align="center"><td><font color=#00A2E8>Asset A</font></td><td><font color=#00A2E8>%riskyMeanTable%\\%</font></td><td><font color=#00A2E8>%riskySDTable%\\%</font></td></tr><tr align="center"><td><font color=#7F7F7F>Asset B</font></td><td><font color=#7F7F7F>%safeMeanTable%\%</font></td><td>-</td></tr></table></html>
+match.0.gui.pathLabel=Path: %pathNum%
+match.0.gui.periodLabel=Period: %periodNum%
+match.0.gui.timerLabel=Period ends in: %timeLeft% seconds
+
+match.40.gui.table=<html><table><tr align="center"><th></th><th>Mean Return</th><th>St. Dev.</th></tr><tr align="center"><td><font color=#00A2E8>Asset A</font></td><td><font color=#00A2E8>%riskyMeanTable%\\%</font></td><td><font color=#00A2E8>%riskySDTable%\\%</font></td></tr><tr align="center"><td><font color=#7F7F7F>Asset B</font></td><td><font color=#7F7F7F>%safeMeanTable%\%</font></td><td>-</td></tr></table></html>
+match.40.gui.pathLabel=Path: %pathNum%
+match.40.gui.periodLabel=Period: %periodNum%
+match.40.gui.timerLabel=Period ends in: %timeLeft% seconds
+
+# the label whch explains the return on each good
+match.0.gui.returnTable=<html><table><tr align="center"><th colspan="2">Last Period Multiplier:</th></tr><tr align="center"><p style="color:#00A2E8;">Asset A</p></font></td><td><p style="color:#00A2E8;font-size:16px">%riskyReturnTable%</p></td></tr><tr align="center"><td><p style="color:#7F7F7F;">Asset B</td><td><p style="color:#7F7F7F;font-size:16px">%safeReturnTable%</p></td></tr></table></html>
+match.40.gui.returnTable=<html><table><tr align="center"><th colspan="2">Last Period Multiplier:</th></tr><tr align="center"><p style="color:#00A2E8;">Asset A</p></font></td><td><p style="color:#00A2E8;font-size:16px">%riskyReturnTable%</p></td></tr><tr align="center"><td><p style="color:#7F7F7F;">Asset B</td><td><p style="color:#7F7F7F;font-size:16px">%safeReturnTable%</p></td></tr></table></html>
+
+
+match.0.gui.percentButtonLabel=\%
+match.0.gui.dollarButtonLabel=$
+match.40.gui.percentButtonLabel=\%
+match.40.gui.dollarButtonLabel=$
+
+
+match.0.gui.accountLabel=<html>Account: $</html>
+match.0.gui.betLabel=<html>4% to win $20<br>cost: $1</html>
+match.0.gui.betButtonLabel=Buy
+match.0.gui.betResultsLabel=<html><center>Previous Result:<br>%betResult%</center></html>
+match.0.gui.noBetValue=
+match.0.gui.betValue=<p style="font-size:14px">$%result% received</p>
+match.0.gui.minValueLabel=<html>Lowest:</html>
+match.0.gui.avgValueLabel=<html>Average:</html>
+match.0.gui.maxValueLabel=<html>Highest:</html>
+match.0.gui.naValue=N/A
+match.40.gui.accountLabel=<html>Account: $</html>
+match.40.gui.betLabel=<html>4% to win $20<br>cost: $1</html>
+match.40.gui.betButtonLabel=Buy
+match.40.gui.betResultsLabel=<html><center>Previous Result:<br>%betResult%</center></html>
+match.40.gui.noBetValue=
+match.40.gui.betValue=<p style="font-size:14px">$%result% received</p>
+match.40.gui.minValueLabel=<html>Lowest:</html>
+match.40.gui.avgValueLabel=<html>Average:</html>
+match.40.gui.maxValueLabel=<html>Highest:</html>
+match.40.gui.naValue=N/A
+
+# the label used under the "final" update slider
+match.0.gui.finalSliderLabel=Final
+match.40.gui.finalSliderLabel=Final
+
+# The color used in the 'risky' portion of the period slider bar
+match.0.gui.sliderRisky=0, 162, 232
+# The color used in the 'safe' portion of the period slider bar
+match.0.gui.sliderSafe=127,127,127
+# The color used in the 'safe' portion of the projection bar
+match.0.gui.projectionSafe=127,127,127
+# The color used in the 60th percentile risky portion of the projection bar
+match.0.gui.projection60=10,50,205
+# The color used in the 90th percentile risky portion of the projection bar
+match.0.gui.projection90=0, 0, 255
+# the color used in between the 90th percentile and the safe projection on the projection bar
+match.0.gui.projectionGap=238,238,238
+# the color used to color the final holdings update slider
+match.0.gui.finalColor=34,177,76
+#the color used for the initial display of the holdings slider
+match.0.gui.initialColor=190,190,190
+
+# The color used in the 'risky' portion of the period slider bar
+match.40.gui.sliderRisky=0, 162, 232
+# The color used in the 'safe' portion of the period slider bar
+match.40.gui.sliderSafe=127,127,127
+# The color used in the 'safe' portion of the projection bar
+match.40.gui.projectionSafe=127,127,127
+# The color used in the 60th percentile risky portion of the projection bar
+match.40.gui.projection60=10,50,205
+# The color used in the 90th percentile risky portion of the projection bar
+match.40.gui.projection90=0, 0, 255
+# the color used in between the 90th percentile and the safe projection on the projection bar
+match.40.gui.projectionGap=238,238,238
+# the color used to color the final holdings update slider
+match.40.gui.finalColor=34,177,76
+#the color used for the initial display of the holdings slider
+match.40.gui.initialColor=190,190,190
+
+# whether or not to display a message at the end of the final match and round of the game summarizing the players earnings
+match.0.gui.showSummaryMessage=true
+match.0.gui.subsetMessage=For subset %subset%, the paid match was %paid%, and you earned %subPay%.
+match.0.gui.totalMessage=The total is %total%
+
+# whether or not to display a message at the end of the final match and round of the game summarizing the players earnings
+match.40.gui.showSummaryMessage=true
+match.40.gui.subsetMessage=For subset %subset%, the paid match was %paid%, and you earned %subPay%.
+match.40.gui.totalMessage=The total is %total%
+
+match.0.askQuestionsPostMatch=false
+
+#### Quiz Parameters ####
+
+match.2.askQuestionsPostMatch=true
+
+match.2.roundsOfQuestions=1
+
+match.2.round.0.numOfQuestions=6
+
+
+match.2.round.0.question.0=Q1) Look at the display on the paper in front of you. What is the current period? 
+match.2.round.0.question.0.ans.0=(a) 1
+match.2.round.0.question.0.ans.1=(b) 2
+match.2.round.0.question.0.ans.2=(c) 6
+match.2.round.0.question.0.ans.3=(d) 8  
+match.2.round.0.question.0.correct= 2
+
+match.2.round.0.question.1=Q2) Had the person not chosen any allocation between assets A and B, how much would she have in the next period?  
+match.2.round.0.question.1.ans.0=(a) $1.44
+match.2.round.0.question.1.ans.1=(b) $4.16
+match.2.round.0.question.1.ans.2=(c) $5.60
+match.2.round.0.question.1.ans.3=(d) $7.29
+match.2.round.0.question.1.correct= 2
+
+match.2.round.0.question.2=Q3) In this period, how much has the person invested in Asset A? 
+match.2.round.0.question.2.ans.0=(a) $5.60 
+match.2.round.0.question.2.ans.1=(b) $4.16
+match.2.round.0.question.2.ans.2=(c) $1.44 
+match.2.round.0.question.2.ans.3=(d) $0.81
+match.2.round.0.question.2.correct= 1
+
+match.2.round.0.question.3=Q4) Assume this person keeps reinvesting the returns of asset A in A and the returns of asset B in B until the end of the path. Given the current allocation, how much money will this person have in asset B after the path ends?   
+match.2.round.0.question.3.ans.0=(a) $1.67
+match.2.round.0.question.3.ans.1=(b) $1.44
+match.2.round.0.question.3.ans.2=(c) $1.03
+match.2.round.0.question.3.ans.3=(d) $7.29
+match.2.round.0.question.3.correct= 0
+
+match.2.round.0.question.4=Q5) Assume this person keeps reinvesting the returns of asset A on A and the returns of asset B on B until the end of the path. Given the current allocation, how much money will this person have in asset A after the path ends? 
+match.2.round.0.question.4.ans.0=(a) $7.29
+match.2.round.0.question.4.ans.1=(b) $5.60
+match.2.round.0.question.4.ans.2=(c) $18.00
+match.2.round.0.question.4.ans.3=(d) Cannot be determined with certainty
+match.2.round.0.question.4.correct= 3
+
+match.2.round.0.question.5=Q6) Forget about the display. Imagine you invest $1 in Asset A and $1 in Asset B and suppose the multiplier on Assets A and B are 2.00 and 1.03 respectively. How much money will you have in the next period?
+match.2.round.0.question.5.ans.0=(a) 3.03 
+match.2.round.0.question.5.ans.1=(b) 4.00
+match.2.round.0.question.5.ans.2=(c) 5.03 
+match.2.round.0.question.5.ans.3=(d) Cannot be determined from the information given. 
+match.2.round.0.question.5.correct= 0
+
+match.3.askQuestionsPostMatch=false
+
+#### Questionnaire ####
+
+match.40.askQuestionsPostMatch=true
+
+match.40.roundsOfQuestions=1
+
+match.40.round.0.numOfQuestions=11
+
+match.40.round.0.question.0=Q1) What is your gender?
+
+
+match.40.round.0.question.0.ans.0=Female
+
+
+match.40.round.0.question.0.ans.1=Male
+
+
+match.40.round.0.question.1=Q2) You would best describe yourself as: 
+
+match.40.round.0.question.1.ans.0=Caucasian
+
+match.40.round.0.question.1.ans.1=African-American
+
+match.40.round.0.question.1.ans.2=Asian
+match.40.round.0.question.1.ans.3=Hispanic
+
+match.40.round.0.question.1.ans.4=Native American
+
+match.40.round.0.question.1.ans.5=Other
+
+
+match.40.round.0.question.2=Q3) What U.S. state do you come from (or country if you are an international student)?	
+
+match.40.round.0.question.2.type=text
+
+
+match.40.round.0.question.3=Q4) What is your home ZIP code?	
+
+match.40.round.0.question.3.type=text
+
+
+match.40.round.0.question.4=Q5) What is your major?	
+
+match.40.round.0.question.4.type=text
+
+
+match.40.round.0.question.5=Q6) What is your GPA?	
+
+match.40.round.0.question.5.type=text
+
+
+
+
+
+match.40.round.0.question.6=Q7) Have you ever studied finance or financial economics?
+
+match.40.round.0.question.6.ans.0=No
+match.40.round.0.question.6.ans.1=Some, but no college coursework
+match.40.round.0.question.6.ans.2=Yes, 1 course
+
+
+match.40.round.0.question.6.ans.3=Yes, 2 or more courses
+
+
+match.40.round.0.question.7=Q8) Are you on Financial Aid?
+
+match.40.round.0.question.7.ans.0=No
+match.40.round.0.question.7.ans.1=Partial Aid
+
+
+match.40.round.0.question.7.ans.2=Full Aid
+
+match.40.round.0.question.8=Q9) Do you have a part time job?
+match.40.round.0.question.8.ans.0=No
+match.40.round.0.question.8.ans.1=Yes, I have 1 job
+
+
+match.40.round.0.question.8.ans.2=Yes, I have 2 jobs
+
+
+match.40.round.0.question.9=Q10) You would best describe your parents’ annual income to be:
+match.40.round.0.question.9.ans.0=Below $50,000
+match.40.round.0.question.9.ans.1=Between $50,000 and $100,000
+
+
+match.40.round.0.question.9.ans.2=Between $100,000 and $150,000
+match.40.round.0.question.9.ans.3=Between $150,000 and $200,000
+match.40.round.0.question.9.ans.4=Between $200,000 and $250,000
+
+
+match.40.round.0.question.9.ans.5=Between $250,000 and $500,000
+match.40.round.0.question.9.ans.6=Above $500,000
+match.40.round.0.question.9.ans.7=Prefer not to answer
+
+
+match.40.round.0.question.10=Q11) Please briefly describe your experience with the experiment today. How did you go about making your investment decisions? Were there any parts in the experiment that you may have not understood well? 
+match.40.round.0.question.10.type=essay
+
+match.1.clone=0
+match.2.clone=1
+match.3.clone=2
+match.4.clone=3
+match.5.clone=4
+match.6.clone=5
+match.7.clone=6
+match.8.clone=7
+match.9.clone=8
+match.10.clone=9
+match.11.clone=10
+match.12.clone=11
+match.13.clone=12
+match.14.clone=13
+match.15.clone=14
+match.16.clone=15
+match.17.clone=16
+match.18.clone=17
+match.19.clone=18
+match.20.clone=19
+match.21.clone=20
+match.22.clone=21
+match.23.clone=22
+match.24.clone=23
+match.25.clone=24
+match.26.clone=25
+match.27.clone=26
+match.28.clone=27
+match.29.clone=28
+match.30.clone=29
+match.31.clone=30
+match.32.clone=31
+match.33.clone=32
+match.34.clone=33
+match.35.clone=34
+match.36.clone=35
+match.37.clone=36
+match.38.clone=37
+match.39.clone=38

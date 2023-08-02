@@ -1,0 +1,98 @@
+#### Questionnaire ####
+
+match.40.askQuestionsPostMatch=true
+
+match.40.roundsOfQuestions=1
+
+match.40.round.0.numOfQuestions=11
+
+match.40.round.0.question.0=Q1) What is your gender?
+
+
+match.40.round.0.question.0.ans.0= Female
+
+
+match.40.round.0.question.0.ans.1= Male
+
+
+match.40.round.0.question.1=Q2) You would best describe yourself as: 
+
+match.40.round.0.question.1.ans.0= Caucasian
+
+match.40.round.0.question.1.ans.1= African-American
+
+match.40.round.0.question.1.ans.2= Asian
+match.40.round.0.question.1.ans.3= Hispanic
+
+match.40.round.0.question.1.ans.4= Native American
+
+match.40.round.0.question.1.ans.5= 
+Other
+
+
+match.40.round.0.question.2=Q3) What U.S. state do you come from (or country if you are an international student)?	
+
+match.40.round.0.question.2.type= text
+
+
+match.40.round.0.question.3=Q4) What is your home ZIP code?	
+
+match.40.round.0.question.3.type= text
+
+
+match.40.round.0.question.4=Q5) What is your major?	
+
+match.40.round.0.question.4.type= text
+
+
+match.40.round.0.question.5=Q6) What is your GPA?	
+
+match.40.round.0.question.5.type= text
+
+
+
+
+
+match.40.round.0.question.6=Q7) Have you ever studied finance or financial economics?
+
+match.40.round.0.question.6.ans.0= No
+match.40.round.0.question.6.ans.1= Some, but no college coursework
+match.40.round.0.question.6.ans.2= Yes, 1 course
+
+
+match.40.round.0.question.6.ans.3= Yes, 2 or more courses
+
+
+match.40.round.0.question.7=Q8) Are you on Financial Aid?
+
+match.40.round.0.question.7.ans.0= No
+match.40.round.0.question.7.ans.1= Partial Aid
+
+
+match.40.round.0.question.7.ans.2= Full Aid
+
+match.40.round.0.question.8=Q9) Do you have a part time job?
+match.40.round.0.question.8.ans.0= No
+match.40.round.0.question.8.ans.1= Yes, I have 1 job
+
+
+match.40.round.0.question.8.ans.2= Yes, I have 2 jobs
+
+
+match.40.round.0.question.9=Q10) You would best describe your parents’ annual income to be:
+match.40.round.0.question.9.ans.0= Below $50,000
+match.40.round.0.question.9.ans.1= Between $50,000 and $100,000
+
+
+match.40.round.0.question.9.ans.2= Between $100,000 and $150,000
+match.40.round.0.question.9.ans.3= Between $150,000 and $200,000
+match.40.round.0.question.9.ans.4= Between $200,000 and $250,000
+
+
+match.40.round.0.question.9.ans.5= Between $250,000 and $500,000
+match.40.round.0.question.9.ans.6= Above $500,000
+match.40.round.0.question.9.ans.7= Prefer not to answer
+
+
+match.40.round.0.question.10=Q11) Please briefly describe your experience with the experiment today. How did you go about making your investment decisions? Were there any parts in the experiment that you may have not understood well? 
+match.40.round.0.question.10.type= essay

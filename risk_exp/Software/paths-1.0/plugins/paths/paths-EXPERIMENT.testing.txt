@@ -1,0 +1,144 @@
+# SAMPLE PATHS PARAMETER FILE #
+
+### Experiment Scope Parameters ###
+exp.id=60
+numOfMatches=10
+
+#### Generic Match Scope Parameters ####
+match.0.type=Paths
+match.0.groupSize=1
+match.0.maxRounds=20
+match.0.exchangeRate=1.0
+
+# show total payoff on the history panel[true|false]
+match.0.showTotalPayoff=false
+
+#[totalrandom|random|zipper|rr|continue|fixed|RiskAversion]
+match.0.matching=fixed
+
+# show the match ending display dialog [true|false]
+match.0.displayFinishedInfo=false
+
+# History panel display mode [full|tabbed]
+match.0.defaultView=full
+
+# Whether to allow user switch history panel display modes [true|false]
+match.0.viewSwitchable=true
+
+# Whether to show the round number in the history panel (generally turn off if running single round matches)
+match.0.showRoundNumber=false
+
+# Whether or not the 0th match is a practice match or not.  Payoffs for 
+# practice matches are not included in a participant's total
+match.0.practice=false
+
+######### PATHS Specific Match Scope Parameters ############
+
+# the number of periods in a path
+match.0.numPeriods=10
+
+# the amount of time the first period lasts, in seconds
+match.0.firstPeriodLength=30
+# the amount of time each period lasts, in seconds
+match.0.otherPeriodLength=30
+
+# the interest rate for the 'safe' asset
+# if match.0.safeInterestRate=.10, then at the beginning of a period a player has 1.10*(the amount of safe asset from the previous period)
+match.0.safeInterestRate=0.03
+
+# The return on the risky asset will be normally distributed on (mean, variance)
+match.0.riskyMean=0.06
+match.0.riskyVariance=0.3025
+
+# the amount of money each subject starts with at the beginning of each path
+match.0.initialHoldings=3
+
+# the original maximum value of the sliders
+match.0.initialMaxValue=25
+# the increment by which the maxValue is increased if the holdings exceed it
+match.0.maxIncrement=5
+
+# the subsets of matches in which players are paid
+#  For example, if paidSubsets=0-4,5-14, then subjects will be paid for one match between match 0 and match 4, 
+#                                                             and one match between match 5 and match 14.
+match.0.paidSubsets=0-1
+
+# the subsets of periods in which betting is allowed
+#    A comma-separated set of numbers, from 0 to numPeriods.  If a number is listed, betting is allowed.  If not listed,
+#    betting in that period is not allowed.  Note that by listing *no* periods, all betting is disallowed.
+match.0.bettingPeriods=
+# the cost of placing a bet
+match.0.betPrice=1
+# the benefit of winning the lottery
+match.0.betWinnings=20
+# the probability of winning the lottery
+match.0.probOfWinning=0.05
+
+# the periods in which the min/avg/max statistics are available to be revealed by subjects
+match.0.revealPeriods=
+# whether the subjects are allowed to view as many statistics as they like or only one
+# [ONE|MANY]: ONE - subjects are only allowed to view one statistic per period
+#                   MANY - subjects are allowed to view as many statistics per period as they wish
+match.0.revealType=ONE
+
+###  GUI PARAMETERS  ###
+
+# whether or not to show the 90th percentile projections
+match.0.gui.use90thPercentile=false
+
+# the height, on screen, of the paths display, as a proportion of total screen height
+match.0.gui.gridLinesHeightProportion=0.8
+# the width, on screen, of each slider column, as a proportion of total screen width
+match.0.gui.sliderWidthProportion=.02
+
+# whether or not to pop up an 'ok' button at the end of every period
+match.0.gui.displayPeriodPopup=true
+# if displayPeriodPopup is true, the message to display above the button
+match.0.gui.periodEndMessage=The period has ended.  Please click 'OK' to continue.
+
+#whether or not the subjects choice (of whether to display dollars or percents) is fixed after the first period in each path
+# [true|false] - true:  the subjects have to pick to view dollars or percents every period and it is fixed for the length of the period
+#                     false:  the subjects can change their view any time during the period
+match.0.fixChosenView=true
+
+match.0.gui.table=<html><table><tr align="center"><th></th><th>Mean Return</th><th>St. Dev.</th></tr><tr align="center"><td><font color=#00A2E8>Asset A</font></td><td><font color=#00A2E8>%riskyMeanTable%\\%</font></td><td><font color=#00A2E8>%riskySDTable%\\%</font></td></tr><tr align="center"><td><font color=#7F7F7F>Asset B</font></td><td><font color=#7F7F7F>%safeMeanTable%\%</font></td><td></td></tr></table></html>
+match.0.gui.pathLabel=Path: %pathNum%
+match.0.gui.periodLabel=Period: %periodNum%
+match.0.gui.timerLabel=Period ends in: %timeLeft% seconds
+
+# the label whch explains the return on each good
+match.0.gui.returnTable=<html><table><tr align="center"><th colspan="2">Last Period Return:</th></tr><tr align="center"><p style="color:#00A2E8;">Asset A</p></font></td><td><p style="color:#00A2E8;font-size:16px">%riskyReturnTable%\\%</p></td></tr><tr align="center"><td><p style="color:#7F7F7F;">Asset B</td><td><p style="color:#7F7F7F;font-size:16px">%safeReturnTable%%</p></td></tr></table></html>
+
+match.0.gui.percentButtonLabel=\%
+match.0.gui.dollarButtonLabel=$$
+
+match.0.gui.accountLabel=<html>Account: $</html>
+match.0.gui.betLabel=<html>5% to win $20<br>cost: $1</html>
+match.0.gui.betButtonLabel=Buy
+match.0.gui.betResultsLabel=<html><center>Previous Lottery:<br>$%betResult%</center></html>
+match.0.gui.minValueLabel=<html>Lowest:</html>
+match.0.gui.avgValueLabel=<html>Average:</html>
+match.0.gui.maxValueLabel=<html>Highest:</html>
+match.0.gui.naValue=N/A
+
+# the label used under the "final" update slider
+match.0.gui.finalSliderLabel=Final
+
+# The color used in the 'risky' portion of the period slider bar
+match.0.gui.sliderRisky=0, 162, 232
+# The color used in the 'safe' portion of the period slider bar
+match.0.gui.sliderSafe=127,127,127
+# The color used in the 'safe' portion of the projection bar
+match.0.gui.projectionSafe=127,127,127
+# The color used in the 60th percentile risky portion of the projection bar
+match.0.gui.projection60=0,0,130
+# The color used in the 90th percentile risky portion of the projection bar
+match.0.gui.projection90=0, 0, 255
+# the color used in between the 90th percentile and the safe projection on the projection bar
+match.0.gui.projectionGap=0,162,232
+# the color used to color the final holdings update slider
+match.0.gui.finalColor=34,177,76
+#the color used for the initial display of the holdings slider
+match.0.gui.initialColor=190,190,190
+
+match.0.repetitions=50
